@@ -1,7 +1,5 @@
 //require('dotenv').config({path: './env'})
 import dotenv from 'dotenv'
-
-import mongoose from 'mongoose'
 import connectDB from './db/index.js';
 import { app,port } from './app.js';
 
@@ -12,7 +10,7 @@ dotenv.config({
 connectDB()
 .then(()=>{
     app.listen(port , ()=>{
-        console.log(`Server is runnit at: http://localhost:${port}`)
+        console.log(`Server is running at: http://localhost:${port}`)
     })
 })
 .catch((error)=>{
